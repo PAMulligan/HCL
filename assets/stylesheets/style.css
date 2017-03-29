@@ -76,6 +76,10 @@ html, header, body, footer {
 ***											   ***
 *************************************************/
 
+footer {
+	background: #f2f2f2;
+}
+
 .profile-greeting {
 	color: #1570a6;
 }
@@ -211,6 +215,20 @@ html, header, body, footer {
 	margin-right: 4em;
 }
 
+footer {
+	height: 22.4em;
+	padding: 2em 0 0 8.4em;
+}
+
+li {
+	margin-top: 0.75em;
+}
+
+#last-article {
+	padding-bottom: 6.2em;
+	border-bottom: none;
+}
+
 /*************************************************
 ***											   ***
 ***					GRID 					   ***
@@ -245,7 +263,7 @@ html, header, body, footer {
 }
 
 .article-container {
-	display: inline-grid;
+	display: grid;
 	grid-template-columns: 48% 52%;
 	grid-template-rows: 4em 6em 10.5em 1.5em;
 	grid-template-areas:
@@ -253,6 +271,15 @@ html, header, body, footer {
 		"article-image article-info"
 		"article-image article-blurb"
 		"article-image more-news-link";
+}
+
+footer {
+	display: grid;
+	grid-template-columns: 25% 25% 35% 15%;
+	grid-template-rows: 12em 1em;
+	grid-template-areas:
+		"footer-ctas footer-external-links . ."
+		". . . copyright";
 }
 
 .title {
@@ -370,6 +397,19 @@ html, header, body, footer {
 .more-news-link {
 	grid-area: more-news-link;
 	justify-self: right;
+}
+
+.footer-ctas {
+	grid-area: footer-ctas;
+}
+
+.footer-external-links {
+	grid-area: footer-external-links;
+}
+
+.copyright {
+	grid-area: copyright;
+	self-justify: right;
 }
 
 /*************************************************
