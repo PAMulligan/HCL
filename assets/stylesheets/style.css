@@ -4,7 +4,7 @@
 ***											   ***
 *************************************************/
 
-html, body {
+html, header, body, footer {
 	overflow-x: hidden;
 }
 
@@ -14,7 +14,7 @@ html, body {
 ***											   ***
 *************************************************/
 
-html, body {
+html, header, body, footer {
 	line-height: 1.2em;
 }
 
@@ -34,31 +34,20 @@ h4 {
 	font-size: 1.6em;
 }
 
-h5 {
+h5, .search, .cta-content {
 	font-size: 1.5em;
 }
 
-h6 {
+h6, .cta-link {
 	font-size: 1.3em;
-}
-
-.search {
-	font-size: 1.5em;
 }
 
 .hero-reminder {
 	font-style: italic;
 }
 
-.cta-content {
-	font-size: 1.5em;
-}
-
-.cta-link {
-	font-size: 1.3em;
-}
-
-.search, .profile-greeting, .hero-subheading, .hero-reminder, .cta-header, .cta-content, .news-heading {
+/* These are all of the classes that use SegoeUI Semilight*/
+.search, .profile-greeting, .hero-subheading, .hero-reminder, .cta-heading, .cta-content, .news-heading {
 	letter-spacing: 0.05em;
 }
 
@@ -67,23 +56,6 @@ h6 {
 ***					FONTS 					   ***
 ***											   ***
 *************************************************/
-
-html, header, body, footer {
-	font-family: segoeUI;
-	font-size: 12px;
-}
-
-#alerts-number {
-	font-family: segoeUI-sb;
-}
-
-.search, .profile-greeting, .hero-subheading, .hero-reminder, .cta-header, .cta-content, .news-heading {
-	font-family: segoeUI-sl;
-}
-
-.hero-heading {
-	font-family: segoeUI-l;
-}
 
 @font-face {
 	font-family: segoeUI;
@@ -105,17 +77,34 @@ html, header, body, footer {
 	src: url(../fonts/segoe-ui-sb.ttf);
 }
 
+html, header, body, footer {
+	font-family: segoeUI;
+	font-size: 12px;
+}
+
+#alerts-number {
+	font-family: segoeUI-sb;
+}
+
+.search, .profile-greeting, .hero-subheading, .hero-reminder, .cta-heading, .cta-content, .news-heading {
+	font-family: segoeUI-sl;
+}
+
+.hero-heading {
+	font-family: segoeUI-l;
+}
+
 /*************************************************
 ***											   ***
 ***					COLORS 					   ***
 ***											   ***
 *************************************************/
 
-footer {
+footer, .sign-out-button {
 	background: #f2f2f2;
 }
 
-.profile-greeting {
+.profile-greeting, .more-news-links {
 	color: #1570a6;
 }
 
@@ -128,19 +117,25 @@ footer {
 	color: #005e5a;
 }
 
-.more-news-link {
-	color: #1570a6;
-}
-
-.sign-out-button {
-	background: #f2f2f2;
-}
-
 /*************************************************
 ***											   ***
 ***					LAYOUT 					   ***
 ***											   ***
 *************************************************/
+
+footer {
+	height: 22.4em;
+	padding: 2em 0 0 8.4em;
+}
+
+li {
+	margin-top: 0.75em;
+}
+
+#last-article {
+	padding-bottom: 6.2em;
+	border-bottom: none;
+}
 
 .logo {
 	max-width: 10em;
@@ -153,19 +148,7 @@ footer {
 	margin-bottom: 3.7em;
 }
 
-.nav-a {
-	padding-top: 0.3em;
-}
-
-.nav-b {
-	padding-top: 0.3em;
-}
-
-.nav-c {
-	padding-top: 0.3em;
-}
-
-.nav-d {
+.nav-a, .nav-b, .nav-c, .nav-d {
 	padding-top: 0.3em;
 }
 
@@ -175,12 +158,7 @@ footer {
 	margin-top: -0.5em;
 }
 
-.search-icon {
-	height: 3.9em;
-	margin-top: -0.8em;
-}
-
-.alarm {
+.search-icon, .alarm {
 	height: 3.9em;
 	margin-top: -0.8em;
 }
@@ -254,20 +232,6 @@ footer {
 	margin-right: 4em;
 }
 
-footer {
-	height: 22.4em;
-	padding: 2em 0 0 8.4em;
-}
-
-li {
-	margin-top: 0.75em;
-}
-
-#last-article {
-	padding-bottom: 6.2em;
-	border-bottom: none;
-}
-
 .sign-out-button {
 	width: 8.4em;
 	height: 4.3em;
@@ -285,6 +249,15 @@ li {
 ***					GRID 					   ***
 ***											   ***
 *************************************************/
+
+footer {
+	display: grid;
+	grid-template-columns: 25% 25% 35% 15%;
+	grid-template-rows: 12em 1em;
+	grid-template-areas:
+		"footer-ctas footer-external-links . ."
+		". . . copyright";
+}
 
 .nav-bar {
 	display: inline-grid;
@@ -322,15 +295,6 @@ li {
 		"article-image article-info"
 		"article-image article-blurb"
 		"article-image more-news-link";
-}
-
-footer {
-	display: grid;
-	grid-template-columns: 25% 25% 35% 15%;
-	grid-template-rows: 12em 1em;
-	grid-template-areas:
-		"footer-ctas footer-external-links . ."
-		". . . copyright";
 }
 
 .title {
