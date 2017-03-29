@@ -97,6 +97,10 @@ footer {
 	color: #1570a6;
 }
 
+.sign-out-button {
+	background: #f2f2f2;
+}
+
 /*************************************************
 ***											   ***
 ***					LAYOUT 					   ***
@@ -229,6 +233,18 @@ li {
 	border-bottom: none;
 }
 
+.sign-out-button {
+	width: 8.4em;
+	height: 4.3em;
+	display: none;
+}
+
+.profile-pic:hover + .sign-out-button {
+	display: inline-block;
+	margin-top: 3.4em;
+	margin-left: -0.4em;
+}
+
 /*************************************************
 ***											   ***
 ***					GRID 					   ***
@@ -322,6 +338,10 @@ footer {
 .profile-greeting {
 	grid-area: profile-greeting;
 	justify-self: right;
+}
+
+.sign-out-button {
+	grid-area: profile-pic;
 }
 
 .profile-pic {
