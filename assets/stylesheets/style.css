@@ -85,7 +85,8 @@ footer {
 }
 
 .hero-container {
-	background: #005e50;
+	/* background: #005e50; */
+	background: linear-gradient(to right, rgba(0,94,80,1),rgba(0,94,80,0)), url('../images/hero-image.jpg');
 	color: white;
 }
 
