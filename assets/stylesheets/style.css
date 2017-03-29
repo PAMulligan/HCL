@@ -89,6 +89,10 @@ html, header, body, footer {
 	color: #005e5a;
 }
 
+.more-news-link {
+	color: #1570a6;
+}
+
 /*************************************************
 ***											   ***
 ***					LAYOUT 					   ***
@@ -175,7 +179,7 @@ html, header, body, footer {
 }
 
 .cta-container {
-	margin: 4.2em 13em 0 13em;
+	margin: 4.2em 13em;
 	width: 100%;
 }
 
@@ -186,6 +190,25 @@ html, header, body, footer {
 
 .cta-link {
 	margin-right: 1em;
+}
+
+.news-heading {
+	margin-left: 4.1em;
+	max-height: 4.1em;
+	border-top: 0.1em solid #cccccc;
+	border-bottom: 0.1em solid #cccccc;
+	padding: 1.5em 0;
+	width: 77%;
+}
+
+.article-container {
+	margin: 4.2em 13em 0;
+	padding-bottom: 4.2em;
+	border-bottom: 0.1em solid #cccccc;
+}
+
+.article-image {
+	margin-right: 4em;
 }
 
 /*************************************************
@@ -219,6 +242,17 @@ html, header, body, footer {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"cta-group-a cta-group-b cta-group-c cta-group-d";
+}
+
+.article-container {
+	display: inline-grid;
+	grid-template-columns: 48% 52%;
+	grid-template-rows: 4em 6em 10.5em 1.5em;
+	grid-template-areas:
+		"article-image article-heading"
+		"article-image article-info"
+		"article-image article-blurb"
+		"article-image more-news-link";
 }
 
 .title {
@@ -315,6 +349,27 @@ html, header, body, footer {
 
 #cta-d {
 	grid-area: cta-group-d;
+}
+
+.article-image {
+	grid-area: article-image;
+}
+
+.article-heading {
+	grid-area: article-heading;
+}
+
+.article-info {
+	grid-area: article-info;
+}
+
+.article-blurb {
+	grid-area: article-blurb;
+}
+
+.more-news-link {
+	grid-area: more-news-link;
+	justify-self: right;
 }
 
 /*************************************************
