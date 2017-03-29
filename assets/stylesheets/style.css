@@ -1,0 +1,203 @@
+/*************************************************
+***											   ***
+***					GLOBAL 					   ***
+***											   ***
+*************************************************/
+
+html, body {
+	overflow-x: hidden;
+}
+
+html, header, body, footer {
+	font-family: segoeUI;
+	font-size: 12px;
+}
+
+/*************************************************
+***											   ***
+***				TYPOGRAPHY 					   ***
+***											   ***
+*************************************************/
+
+h1 {
+	font-size: 4.1em;
+}
+
+h2 {
+	font-size: 3.1em;
+}
+
+h3 {
+	font-size: 2.3em;
+}
+
+h4 {
+	font-size: 1.6em;
+}
+
+h5 {
+	font-size: 1.5em;
+}
+
+h6 {
+	font-size: 1.3em;
+}
+
+/*************************************************
+***											   ***
+***					FONTS 					   ***
+***											   ***
+*************************************************/
+
+@font-face {
+	font-family: segoeUI;
+	src: url(../fonts/segoe-ui.ttf);
+}
+
+/*************************************************
+***											   ***
+***					COLORS 					   ***
+***											   ***
+*************************************************/
+
+.profile-greeting {
+	color: #1570a6;
+}
+
+.header-splash {
+	background: #005e50;
+}
+
+/*************************************************
+***											   ***
+***					LAYOUT 					   ***
+***											   ***
+*************************************************/
+
+.logo {
+	max-width: 10em;
+	max-height: 5em;
+	margin: 1em 0 1em 7.5em;
+}
+
+.nav-bar {
+	margin-left: 8.4em;
+	margin-bottom: 3.7em;
+}
+
+.nav-a {
+	padding-top: 0.3em;
+}
+
+.nav-b {
+	padding-top: 0.3em;
+}
+
+.nav-c {
+	padding-top: 0.3em;
+}
+
+.nav-d {
+	padding-top: 0.3em;
+}
+
+.search-icon {
+	height: 3.9em;
+	margin-top: -0.8em;
+}
+
+.alarm {
+	height: 3.9em;
+	margin-top: -0.8em;
+}
+
+.profile-greeting {
+	margin-right: 0.5em;
+}
+
+.profile-pic {
+	height: 3.9em;
+	margin-top: -0.8em;
+}
+
+.header-splash {
+	height: 38.2em;
+	border-top: 0.1em solid #cccccc;
+}
+
+/*************************************************
+***											   ***
+***					GRID 					   ***
+***											   ***
+*************************************************/
+
+.nav-bar {
+	display: inline-grid;
+	grid-template-columns: auto 2.3em 8em 8em 8em 8em 2.3em 30em 3.9em 0.5em 3.9em 2em auto 3.33em;
+	grid-template-rows: 3.33em;
+	grid-template-areas:
+		"title . nav-a nav-b nav-c nav-d . search search-icon . alarm . profile-greeting profile-pic";
+}
+
+.title {
+	grid-area: title;
+}
+
+.nav-a {
+	grid-area: nav-a;
+	justify-self: center;
+}
+
+.nav-b {
+	grid-area: nav-b;
+	justify-self: center;
+}
+
+.nav-c {
+	grid-area: nav-c;
+	justify-self: center;
+}
+
+.nav-d {
+	grid-area: nav-d;
+	justify-self: center;
+}
+
+.search {
+	grid-area: search;
+	font-size: 1.5em;
+	width: 100%;
+	height: 2.6em;
+	margin-top: -0.5em;
+	-webkit-appearance: none;
+}
+
+.search-icon {
+	grid-area: search-icon;
+}
+
+.alarm {
+	grid-area: alarm;
+}
+
+.profile-greeting {
+	grid-area: profile-greeting;
+	justify-self: right;
+}
+
+.profile-pic {
+	grid-area: profile-pic;
+	justify-self: center;
+}
+
+/*************************************************
+***											   ***
+***				RESPONSIVE 					   ***
+***											   ***
+*************************************************/
+
+@media screen and (min-width: 1700px) {
+	html, body {
+		font-size: 15px;
+	}
+}
