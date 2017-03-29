@@ -8,11 +8,6 @@ html, body {
 	overflow-x: hidden;
 }
 
-html, header, body, footer {
-	font-family: segoeUI;
-	font-size: 12px;
-}
-
 /*************************************************
 ***											   ***
 ***				TYPOGRAPHY 					   ***
@@ -51,11 +46,24 @@ h6 {
 	font-style: italic;
 }
 
+.cta-content {
+	font-size: 1.5em;
+}
+
+.cta-link {
+	font-size: 1.3em;
+}
+
 /*************************************************
 ***											   ***
 ***					FONTS 					   ***
 ***											   ***
 *************************************************/
+
+html, header, body, footer {
+	font-family: segoeUI;
+	font-size: 12px;
+}
 
 @font-face {
 	font-family: segoeUI;
@@ -75,6 +83,10 @@ h6 {
 .hero-container {
 	background: #005e50;
 	color: white;
+}
+
+.cta-link {
+	color: #005e5a;
 }
 
 /*************************************************
@@ -162,6 +174,20 @@ h6 {
 	margin: 1em 0 0 8em;
 }
 
+.cta-container {
+	margin: 4.2em 13em 0 13em;
+	width: 100%;
+}
+
+.cta-content {
+	margin: 0.8em 0 0 0.2em;
+	width: 65%;
+}
+
+.cta-link {
+	margin-right: 1em;
+}
+
 /*************************************************
 ***											   ***
 ***					GRID 					   ***
@@ -185,6 +211,14 @@ h6 {
 		"hero-subheading hero-image"
 		"hero-tasks hero-image"
 		"hero-reminder hero-image";
+}
+
+.cta-container {
+	display: inline-grid;
+	grid-template-columns: 19% 25% 22% 22%;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"cta-group-a cta-group-b cta-group-c cta-group-d";
 }
 
 .title {
@@ -265,6 +299,22 @@ h6 {
 
 .hero-image {
 	grid-area: hero-image;
+}
+
+#cta-a {
+	grid-area: cta-group-a;
+}
+
+#cta-b {
+	grid-area: cta-group-b;
+}
+
+#cta-c {
+	grid-area: cta-group-c;
+}
+
+#cta-d {
+	grid-area: cta-group-d;
 }
 
 /*************************************************
