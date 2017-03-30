@@ -44,7 +44,7 @@ h1 {
 }
 
 h2 {
-	font-size: 3.1em;
+	font-size: 2.8em;
 }
 
 h3 {
@@ -52,15 +52,15 @@ h3 {
 }
 
 h4 {
-	font-size: 1.6em;
-}
-
-h5, .search, .cta-content {
 	font-size: 1.5em;
 }
 
+h5, .search, .cta-content {
+	font-size: 1.4em;
+}
+
 h6, .cta-link {
-	font-size: 1.3em;
+	font-size: 1.2em;
 }
 
 .hero-reminder {
@@ -140,6 +140,13 @@ a:hover {
 	color: white;
 }
 
+#second-article {
+	text-decoration-line: underline;
+	text-decoration: underline;
+	text-decoration-color: blue;
+	color: blue;
+}
+
 /*************************************************
 ***											   ***
 ***					LAYOUT 					   ***
@@ -148,16 +155,12 @@ a:hover {
 
 footer {
 	height: 22.4em;
+	margin-top: 4.5em;
 	padding: 2em 0 0 8.4em;
 }
 
 li {
 	margin-top: 0.75em;
-}
-
-#last-article {
-	padding-bottom: 6.2em;
-	border-bottom: none;
 }
 
 .logo {
@@ -206,11 +209,11 @@ li {
 }
 
 .hero-heading {
-	margin: 2em 0 0 3em;
+	margin: 2em 0 0 2.8em;
 }
 
 .hero-subheading {
-	margin: 3em 0 0 5.9em;
+	margin: 3em 0 0 5.6em;
 }
 
 #tasks-links > .tasks, #tasks-links > .chevron {
@@ -258,7 +261,7 @@ li {
 .article-container {
 	margin: 4.2em 13em 0;
 	padding-bottom: 4.2em;
-	border-bottom: 0.1em solid #cccccc;
+	border-bottom: 0.4em solid #cccccc;
 }
 
 .article-image {
@@ -312,7 +315,7 @@ footer {
 
 .nav-bar {
 	display: inline-grid;
-	grid-template-columns: auto 2.3em 15em 2em 16em 1em 8em 32em 3.9em 0.5em 3.9em 2em auto 3.33em;
+	grid-template-columns: auto 11em 8em 8em 8em 8em 11em 23em 3.9em 0.8em auto;
 	grid-template-rows: auto 3.33em;
 	grid-template-areas:
 		"logo . . . . . . profile-greeting profile-greeting . profile-pic"
