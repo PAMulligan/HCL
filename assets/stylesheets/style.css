@@ -6,6 +6,7 @@
 
 html, header, body, footer {
 	overflow-x: hidden;
+	max-height: 100%;
 }
 
 /*************************************************
@@ -104,8 +105,22 @@ footer, .sign-out-button {
 	background: #f2f2f2;
 }
 
-.profile-greeting, .more-news-links {
-	color: #1570a6;
+a:-webkit-any-link {
+	text-decoration: none;
+	color: black;
+}
+
+a {
+	text-decoration-line: none;
+	text-decoration-color: none !important;
+}
+
+a:hover {
+	color: #005e50;
+}
+
+.profile-greeting, #more-news-link {
+	color: #1570a6 !important;
 }
 
 .hero-container {
@@ -114,7 +129,15 @@ footer, .sign-out-button {
 }
 
 .cta-link {
-	color: #005e5a;
+	color: #005e5a !important;
+}
+
+#alerts-number {
+	color: white;
+}
+
+#tasks-links {
+	color: white;
 }
 
 /*************************************************
@@ -177,12 +200,21 @@ li {
 	border-top: 0.1em solid #cccccc;
 }
 
+.hero-image {
+	max-width: 100%;
+	height: 100%;
+}
+
 .hero-heading {
 	margin: 2em 0 0 3em;
 }
 
 .hero-subheading {
 	margin: 3em 0 0 5.5em;
+}
+
+#tasks-links > .tasks, #tasks-links > .chevron {
+	display: inline-block;
 }
 
 .tasks {
@@ -193,6 +225,7 @@ li {
 	height: 1em;
 	width: 1em;
 	margin-top: 3.5em;
+	margin-left: 1em;
 }
 
 .hero-reminder {
@@ -205,7 +238,7 @@ li {
 }
 
 .cta-content {
-	margin: 0.8em 0 0 0.2em;
+	margin: 1.4em 0 0 0.2em;
 	width: 65%;
 }
 
@@ -230,6 +263,7 @@ li {
 
 .article-image {
 	margin-right: 4em;
+	max-width: 100%;
 }
 
 .sign-out-button {
@@ -242,6 +276,24 @@ li {
 	display: inline-block;
 	margin-top: 3.4em;
 	margin-left: -0.4em;
+}
+
+/*************************************************
+***											   ***
+***				 TRANSITIONS				   ***
+***											   ***
+*************************************************/
+
+.nav-link, .tasks, .chevron, .cta-link, .article-heading {
+	transition: 0.5s ease;
+	-o-transition: 0.5s ease;
+	-moz-transition: 0.5s ease;
+	-webkit-transition: 0.5s ease;
+}
+
+.nav-link:hover, .tasks:hover, .chevron:hover, .cta-link:hover, .article-heading:hover {
+	text-decoration: underline;
+	text-decoration-line: underline;
 }
 
 /*************************************************
@@ -269,7 +321,7 @@ footer {
 
 .hero-container {
 	display: grid;
-	grid-template-columns: 60% 40%;
+	grid-template-columns: 55% 45%;
 	grid-template-rows: 25% 25% 25% 25%;
 	grid-template-areas:
 		"hero-heading hero-image"
@@ -359,10 +411,14 @@ footer {
 .hero-tasks {
 	grid-area: hero-tasks;
 	display: inline-grid;
-	grid-template-columns: 26em auto;
+	grid-template-columns: auto auto;
 	grid-template-rows: 1em;
 	grid-template-areas:
 		"tasks chevron";
+}
+
+.tasks-links {
+	grid-area: tasks;
 }
 
 .tasks {
@@ -413,7 +469,7 @@ footer {
 	grid-area: article-blurb;
 }
 
-.more-news-link {
+#more-news-link {
 	grid-area: more-news-link;
 	justify-self: right;
 }
