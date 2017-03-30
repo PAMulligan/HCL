@@ -9,6 +9,26 @@ html, header, body, footer {
 	max-height: 100%;
 }
 
+@font-face {
+	font-family: segoeUI;
+	src: url(../fonts/segoe-ui.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: segoeUI-sl;
+	src: url(../fonts/segoe-ui-sl.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: segoeUI-l;
+	src: url(../fonts/segoe-ui-l.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: segoeUI-sb;
+	src: url(../fonts/segoe-ui-sb.ttf) format('truetype');
+}
+
 /*************************************************
 ***											   ***
 ***				TYPOGRAPHY 					   ***
@@ -58,41 +78,21 @@ h6, .cta-link {
 ***											   ***
 *************************************************/
 
-@font-face {
-	font-family: segoeUI;
-	src: url(../fonts/segoe-ui.ttf);
-}
-
-@font-face {
-	font-family: segoeUI-sl;
-	src: url(../fonts/segoe-ui-sl.ttf);
-}
-
-@font-face {
-	font-family: segoeUI-l;
-	src: url(../fonts/segoe-ui-l.ttf);
-}
-
-@font-face {
-	font-family: segoeUI-sb;
-	src: url(../fonts/segoe-ui-sb.ttf);
-}
-
 html, header, body, footer {
-	font-family: segoeUI;
+	font-family: 'segoeUI', 'Open Sans', sans-serif;
 	font-size: 12px;
 }
 
 #alerts-number {
-	font-family: segoeUI-sb;
+	font-family: 'segoeUI-sb', 'Open Sans', sans-serif;
 }
 
 .search, .profile-greeting, .hero-subheading, .hero-reminder, .cta-heading, .cta-content, .news-heading {
-	font-family: segoeUI-sl;
+	font-family: 'segoeUI-sl', 'Open Sans', sans-serif;
 }
 
 .hero-heading {
-	font-family: segoeUI-l;
+	font-family: 'segoeUI-l', 'Open Sans', sans-serif;
 }
 
 /*************************************************
