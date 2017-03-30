@@ -48,7 +48,7 @@ h2 {
 }
 
 h3 {
-	font-size: 2.3em;
+	font-size: 2.1em;
 }
 
 h4 {
@@ -162,8 +162,8 @@ li {
 
 .logo {
 	max-width: 10em;
-	max-height: 5em;
-	margin: 1em 0 1em 7.5em;
+	max-height: 4em;
+	margin: 2em 0 1em -1em;
 }
 
 .nav-bar {
@@ -187,12 +187,12 @@ li {
 }
 
 .profile-greeting {
-	margin-right: 0.5em;
+	margin: 2.5em 0.5em 0 0;
 }
 
 .profile-pic {
 	height: 3.9em;
-	margin-top: -0.8em;
+	margin: 2em 0;
 }
 
 .hero-container {
@@ -210,7 +210,7 @@ li {
 }
 
 .hero-subheading {
-	margin: 3em 0 0 5.5em;
+	margin: 3em 0 0 5.9em;
 }
 
 #tasks-links > .tasks, #tasks-links > .chevron {
@@ -273,9 +273,8 @@ li {
 }
 
 .profile-pic:hover + .sign-out-button {
-	display: inline-block;
-	margin-top: 3.4em;
-	margin-left: -0.4em;
+	display: block;
+	margin-top: 6.4em;
 }
 
 /*************************************************
@@ -313,10 +312,11 @@ footer {
 
 .nav-bar {
 	display: inline-grid;
-	grid-template-columns: auto 2.3em 8em 8em 8em 8em 2.3em 30em 3.9em 0.5em 3.9em 2em auto 3.33em;
-	grid-template-rows: 3.33em;
+	grid-template-columns: auto 2.3em 15em 2em 16em 1em 8em 32em 3.9em 0.5em 3.9em 2em auto 3.33em;
+	grid-template-rows: auto 3.33em;
 	grid-template-areas:
-		"title . nav-a nav-b nav-c nav-d . search search-icon . alarm . profile-greeting profile-pic";
+		"logo . . . . . . profile-greeting profile-greeting . profile-pic"
+		"title . nav-a nav-b nav-c nav-d . search search-icon . alarm";
 }
 
 .hero-container {
@@ -347,6 +347,10 @@ footer {
 		"article-image article-info"
 		"article-image article-blurb"
 		"article-image more-news-link";
+}
+
+.logo {
+	grid-area: logo;
 }
 
 .title {
